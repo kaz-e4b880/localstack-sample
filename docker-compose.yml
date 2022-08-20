@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  localstack:
+    image: localstack/localstack:1.0.4
+    ports:
+      - 4566:4566
+    environment:
+      - DEFAULT_REGION=us-west-1
+      - SERVICES=s3
+  aws-cli:
+    image: amazon/aws-cli:2.7.23
+    environment:
+      - AWS_DEFAULT_REGION=us-west-1
+      - AWS_ACCESS_KEY_ID=dummy
+      - AWS_SECRET_ACCESS_KEY=dummy
+    volumes:
+      - .:/aws
