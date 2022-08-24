@@ -21,4 +21,5 @@ docker-compose run --rm aws-cli s3 ls s3://sample-bucket/sample-dir/ --endpoint-
 
 ## Explorer
 
+- [health](http://localhost:4566/health)
 - [sample-bucket files](http://localhost:4566/sample-bucket)
