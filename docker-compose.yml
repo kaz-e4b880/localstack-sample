@@ -6,9 +6,10 @@ services:
       - 4566:4566
     environment:
       - DEFAULT_REGION=us-west-1
-      - SERVICES=s3
+      - SERVICES=s3,cloudwatch
     volumes:
       - ./localstack/docker-entrypoint-initaws.d:/docker-entrypoint-initaws.d
+
   aws-cli:
     image: amazon/aws-cli:2.7.23
     environment:
