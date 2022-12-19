@@ -17,6 +17,9 @@ docker-compose run --rm aws-cli s3 cp sample.txt s3://sample-bucket/sample-dir/ 
 
 # ls files in bucket
 docker-compose run --rm aws-cli s3 ls s3://sample-bucket/sample-dir/ --endpoint-url=http://localstack:4566
+
+# show log groups
+docker-compose run --rm aws-cli logs describe-log-groups --endpoint-url=http://localstack:4566
 ```
 
 ## Explorer
