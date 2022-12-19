@@ -4,7 +4,7 @@
 
 ```bash
 # show config
-docker-compose run --rm aws-cli aws configure list
+docker-compose run --rm aws-cli configure list
 
 # make bucket
 docker-compose run --rm aws-cli s3 mb s3://sample-bucket --endpoint-url=http://localstack:4566
