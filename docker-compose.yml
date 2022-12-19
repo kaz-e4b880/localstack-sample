@@ -9,6 +9,7 @@ services:
       - SERVICES=s3
     volumes:
       - ./localstack/docker-entrypoint-initaws.d:/docker-entrypoint-initaws.d
+
   aws-cli:
     image: amazon/aws-cli:2.7.23
     environment:
